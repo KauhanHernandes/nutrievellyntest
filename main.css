@@ -61,7 +61,7 @@ header {
 }
 
 .header-content h1 {
-    font-size: 2rem;
+    font-size: 1,5rem;
     margin: 0; 
     font-weight: 700;
     color: #000;
@@ -69,7 +69,7 @@ header {
 }
 
 .header-content p {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     color: #020202;
     font-weight: 400;
     margin: 0; 
