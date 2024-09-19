@@ -61,7 +61,7 @@ header {
 }
 
 .header-content h1 {
-    font-size: 1,5rem;
+    font-size: 1,3rem;
     margin: 0; 
     font-weight: 700;
     color: #000;
@@ -353,10 +353,19 @@ footer {
     max-width: 80%;
 }
 
+.modal-dialog {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 1rem);
+    margin: 0; 
+}
+
 .modal-dialog-centered {
     display: flex;
     align-items: center;
     justify-content: center;
+    min-height: calc(100vh - 1rem);
 }
 
 @media (max-width: 767.98px) {
