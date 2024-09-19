@@ -47,6 +47,7 @@ header {
 }
 
 .header-content {
+    font-family: 'Rubiki', sans-serif;
     max-width: 800px;
     margin: 0 auto;
     display: flex;
@@ -55,25 +56,12 @@ header {
     animation: fadeInDown 1.2s ease-in-out;
 }
 
-.logo-container {
-    margin-right: 20px; 
-}
-
 .text-container {
     flex: 1; 
 }
 
-.additional-container {
-    margin-left: 20px; 
-}
-
-.logo, .additional-image {
-    width: 70px; 
-    height: auto; 
-}
-
 .header-content h1 {
-    font-size: 3rem;
+    font-size: 2rem;
     margin: 0; 
     font-weight: 700;
     color: #000;
