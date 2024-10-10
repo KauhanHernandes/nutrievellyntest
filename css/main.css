@@ -12,7 +12,7 @@
 }
 
 @font-face {
-    font-family: 'roboto';
+    font-family: 'Roboto';
     src: url('fonte/Rotobo/RobotoItalic-W0gE.ttf') format('truetype'); 
     font-weight: bold;
     font-style: normal;
@@ -25,18 +25,30 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Informal';
+    src: url('fonte/Informal/Informal.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'montserrat';
+    src: url('fonte/montserrat/Montserrat-Regular.otf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
 body {
     font-family: 'Noto', sans-serif;
     line-height: 1.6;
     background-color: #f4f4f4;
-    padding: 0;
     margin: 0;
     overflow-x: hidden;
 }
 
 /* Header */
 header {
-    font-family: 'Noto', sans-serif;
     background: linear-gradient(135deg, #F8A035 0%, #F7AC70 100%);
     color: #fff;
     text-align: center;
@@ -47,7 +59,6 @@ header {
 }
 
 .header-content {
-    font-family: 'Rubiki', sans-serif;
     max-width: 800px;
     margin: 0 auto;
     display: flex;
@@ -61,7 +72,8 @@ header {
 }
 
 .header-content h1 {
-    font-size: 1,3rem;
+    font-family: 'informal', sans-serif; 
+    font-size: 3rem; 
     margin: 0; 
     font-weight: 700;
     color: #000;
@@ -69,6 +81,7 @@ header {
 }
 
 .header-content p {
+    font-family: 'roboto', sans-serif; 
     font-size: 1.1rem;
     color: #020202;
     font-weight: 400;
@@ -94,8 +107,6 @@ header {
     justify-content: center;
     padding: 40px;
     background-color: #fff;
-    width: 100%;
-    font-family: 'roboto', sans-serif;
 }
 
 #about img {
@@ -111,19 +122,21 @@ header {
     max-width: 600px;
 }
 
+.about-content h2 {
+    font-family: 'Rubik', sans-serif; 
+    font-size: 2rem; 
+    margin-bottom: 10px; 
+}
+
+.about-content p {
+    font-family: 'Roboto', sans-serif; 
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
-    .header-content {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .logo-container,
-    .additional-container {
-        margin: 10px 0;
-    }
-
     #about {
         flex-direction: column;
         text-align: center;
@@ -135,18 +148,16 @@ header {
         max-width: 400px; 
     }
 }
-
 /* Seção Serviços */
 #services {
     padding: 40px;
     background: linear-gradient(135deg, #F7AC70 0%, #F8A035 100%);
     text-align: center;
-    width: 100%;
 }
 
 #services h2 {
     margin-bottom: 20px;
-    color: #000000;
+    color: #000;
 }
 
 .service-cards {
@@ -162,15 +173,8 @@ a.card-link {
     display: block;
 }
 
-a.card-link:hover .service-card {
-    transform: scale(1.05);
-    background-color: #f1f1f1;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Estilo para o card */
 .service-card {
-    font-family: 'roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
     background-color: white;
     border-radius: 10px;
     width: 300px;
@@ -179,8 +183,6 @@ a.card-link:hover .service-card {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
     color: inherit;
-    display: block;
-    text-decoration: none;
 }
 
 .service-card:hover {
@@ -263,7 +265,7 @@ footer {
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    font-family: 'Noto', sans-serif;
+    font-family: 'Noto', sans-serif; 
 }
 
 .modal-header {
@@ -279,10 +281,10 @@ footer {
     font-size: 1.5rem;
     font-weight: bold;
     margin: 0; 
+    font-family: 'Nato', sans-serif;
 }
 
 .modal-body {
-    font-family: 'roboto', sans-serif;
     padding: 20px;
     color: #333;
     line-height: 1.8;
@@ -298,6 +300,13 @@ footer {
     margin-top: 15px;
     margin-bottom: 10px;
     text-align: center; 
+    font-family: 'Nato', sans-serif; 
+}
+
+.modal-body p {
+    font-family: 'montserrat', sans-serif; 
+    color: #333;
+    font-size: 1rem;
 }
 
 .modal-body ul {
@@ -308,6 +317,7 @@ footer {
 
 .modal-body ul li {
     margin-bottom: 10px;
+    font-family: 'montserrat', sans-serif; 
 }
 
 .modal-footer {
@@ -324,7 +334,6 @@ footer {
 
 .modal-footer .btn-secondary:hover {
     background-color: #000000;
-    border-color: #000000;
 }
 
 .modal-footer .btn-primary {
@@ -334,13 +343,12 @@ footer {
 
 .modal-footer .btn-primary:hover {
     background-color: #000000; 
-    border-color: #000000;
 }
 
 .btn-close {
     background: transparent;
     border: none;
-    color: white;
+    color: rgb(2, 2, 2);
     font-size: 1.25rem;
     opacity: 0.8;
 }
