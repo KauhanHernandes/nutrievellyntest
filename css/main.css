@@ -183,6 +183,15 @@ a.card-link {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
     color: inherit;
+    font-size: 20px; 
+}
+
+.service-card h3 {
+    font-size: 19px; 
+}
+
+.service-card p {
+    font-size: 14px; 
 }
 
 .service-card:hover {
@@ -191,8 +200,9 @@ a.card-link {
 }
 
 .service-card img {
-    width: 100%;
+    width: 90%;
     border-radius: 5px;
+    margin-bottom: 10px; 
 }
 
 /* Footer */
