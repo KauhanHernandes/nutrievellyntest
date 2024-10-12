@@ -279,7 +279,7 @@ footer {
     font-family: 'Noto', sans-serif; 
     transition: transform 0.3s ease, opacity 0.3s ease;
     max-width: 600px; 
-    width: 100%; 
+    width: 90%; 
 }
 
 .modal-header {
@@ -409,24 +409,25 @@ footer {
     }
 
     .modal-content {
-        border-radius: 0;
+        border-radius: 5px; 
+        width: 90%; 
     }
 
     .modal-header,
     .modal-footer {
-        padding: 10px;
+        padding: 10px; 
     }
 
     .modal-title {
-        font-size: 1.25rem;
+        font-size: 1.25rem; 
     }
 
     .modal-body {
-        font-size: 0.875rem;
-        padding: 15px;
+        font-size: 0.875rem; 
+        padding: 15px; 
     }
 
     .modal-body h6 {
-        font-size: 1rem;
+        font-size: 1rem; 
     }
 }
