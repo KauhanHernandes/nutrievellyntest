@@ -11,14 +11,13 @@ window.addEventListener('load', () => {
     // Inicializa o AOS (Animate On Scroll)
     AOS.init({
         duration: 1200,
-        once: true, 
-        offset: window.innerWidth <= 768 ? 100 : 200, 
-        disable: function() {
+        once: true,
+        offset: window.innerWidth <= 768 ? 100 : 200,
+        disable: function () {
             return window.innerWidth < 600;
         }
     });
 });
-
 
 // Inicializar botões de modais
 const modalButtons = document.querySelectorAll('[data-bs-toggle="modal"]');
@@ -34,6 +33,8 @@ closeModalButtons.forEach(button => {
 const cardWidth = 250;
 const spacing = 20;
 const carousel = document.querySelector('.carousel');
+const prevButton = document.querySelector('.carousel-button.prev');
+const nextButton = document.querySelector('.carousel-button.next');
 
 if (carousel) {
     let animation = null;
@@ -45,6 +46,31 @@ if (carousel) {
             duration: 5,
             ease: 'linear',
             repeat: -1,
+        });
+    }
+
+    // Função para mover o carrossel manualmente
+    function moveCarousel(direction) {
+        const currentTransform = gsap.getProperty(carousel, 'x') || 0;
+        const moveDistance = (cardWidth + spacing) * direction;
+
+        gsap.to(carousel, {
+            x: currentTransform + moveDistance,
+            duration: 0.5,
+            ease: 'power2.inOut'
+        });
+    }
+
+    // Configurar botões de navegação
+    if (prevButton) {
+        prevButton.addEventListener('click', () => {
+            moveCarousel(1); // Move para a direita
+        });
+    }
+
+    if (nextButton) {
+        nextButton.addEventListener('click', () => {
+            moveCarousel(-1); // Move para a esquerda
         });
     }
 
