@@ -447,7 +447,6 @@ footer {
     z-index: 10;
 }
 
-/* Título da certificação */
 .certifications-title {
     font-size: 2rem;
     color: #333;
@@ -457,9 +456,8 @@ footer {
     display: inline-block;
 }
 
-/* Container do carrossel agora será fixado dentro da aba de certificações */
 .carousel-container {
-    position: relative; /* Ajustado para permitir os botões */
+    position: relative; 
     top: 0;
     left: 50%;
     transform: translateX(-50%);
@@ -469,20 +467,18 @@ footer {
     align-items: center;
     justify-content: flex-start;
     z-index: 5;
-    overflow: hidden; /* Evita que os elementos extrapolem o container */
+    overflow: hidden;
 }
 
-/* Estilo do carrossel com animação */
 .carousel {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     white-space: nowrap;
     transition: transform 0.5s ease-in-out;
-    gap: 10px; /* Espaçamento entre os cards */
+    gap: 10px; 
 }
 
-/* Efeito de transição para os cards */
 .card {
     flex-shrink: 0;
     width: 20vw;
@@ -506,7 +502,6 @@ footer {
     opacity: 0.9;
 }
 
-/* Estilo dos botões de navegação */
 .carousel-button {
     position: absolute;
     top: 50%;
@@ -535,37 +530,45 @@ footer {
     right: 10px;
 }
 
-/* Responsividade para dispositivos móveis (celulares) */
 @media (max-width: 600px) {
-    .card {
-        width: 80vw;
-        height: 180px;
+    .carousel {
+        overflow-x: scroll; 
     }
+    
+    .card {
+        width: 80vw; 
+        height: 180px; 
+    }
+    
     .carousel-button {
         font-size: 14px;
         padding: 8px 12px;
     }
+    
     .card img {
         object-fit: cover;
     }
 }
 
-/* Responsividade para tablets (entre 601px e 1024px) */
 @media (min-width: 601px) and (max-width: 1024px) {
+    .carousel {
+        overflow-x: auto; 
+    }
+    
     .card {
-        width: 40vw;
+        width: 40vw; 
         height: 250px;
     }
+    
     .carousel-button {
         font-size: 16px;
         padding: 10px 15px;
     }
 }
 
-/* Responsividade para notebooks (maiores que 1024px) */
 @media (min-width: 1025px) {
     .card {
-        width: 18vw;
+        width: 18vw; 
         height: 220px;
     }
 }
