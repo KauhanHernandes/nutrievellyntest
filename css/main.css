@@ -506,11 +506,6 @@ footer {
     opacity: 0.9;
 }
 
-.card:hover {
-    transform: scale(1.05); /* Aumenta levemente no hover */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-}
-
 /* Estilo dos botões de navegação */
 .carousel-button {
     position: absolute;
@@ -549,6 +544,9 @@ footer {
     .carousel-button {
         font-size: 14px;
         padding: 8px 12px;
+    }
+    .card img {
+        object-fit: cover;
     }
 }
 

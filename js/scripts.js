@@ -25,7 +25,7 @@ const closeModalButtons = document.querySelectorAll('.btn-close');
 
 closeModalButtons.forEach(button => {
     button.addEventListener('click', () => {
-        // Placeholder para lógica adicional
+        // Adicione sua lógica de fechamento de modal aqui
     });
 });
 
@@ -54,23 +54,33 @@ if (carousel) {
         const currentTransform = gsap.getProperty(carousel, 'x') || 0;
         const moveDistance = (cardWidth + spacing) * direction;
 
+        // Pausa a animação contínua ao clicar no botão
+        if (animation) {
+            animation.pause();
+        }
+
+        // Atualiza a posição do carrossel
         gsap.to(carousel, {
             x: currentTransform + moveDistance,
             duration: 0.5,
-            ease: 'power2.inOut'
+            ease: 'power2.inOut',
+            onComplete: () => {
+
+                animateCarousel();
+            }
         });
     }
 
     // Configurar botões de navegação
     if (prevButton) {
         prevButton.addEventListener('click', () => {
-            moveCarousel(1); // Move para a direita
+            moveCarousel(1);
         });
     }
 
     if (nextButton) {
         nextButton.addEventListener('click', () => {
-            moveCarousel(-1); // Move para a esquerda
+            moveCarousel(-1); 
         });
     }
 
