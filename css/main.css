@@ -467,7 +467,7 @@ footer {
     align-items: center;
     justify-content: flex-start;
     z-index: 5;
-    overflow: hidden;
+    overflow: hidden; 
 }
 
 .carousel {
@@ -481,7 +481,8 @@ footer {
 
 .card {
     flex-shrink: 0;
-    width: 20vw;
+    width: 100%;  
+    max-width: 20vw;  
     height: 220px;
     background: #eee;
     border-radius: 10px;
@@ -530,14 +531,16 @@ footer {
     right: 10px;
 }
 
+/* Responsividade para dispositivos móveis (celulares) */
 @media (max-width: 600px) {
     .carousel {
-        overflow-x: scroll; 
+        overflow-x: hidden;
     }
     
     .card {
         width: 80vw; 
         height: 180px; 
+        max-width: 90vw; 
     }
     
     .carousel-button {
@@ -552,12 +555,13 @@ footer {
 
 @media (min-width: 601px) and (max-width: 1024px) {
     .carousel {
-        overflow-x: auto; 
+        overflow-x: hidden;
     }
     
     .card {
         width: 40vw; 
         height: 250px;
+        max-width: 45vw; 
     }
     
     .carousel-button {
@@ -568,7 +572,8 @@ footer {
 
 @media (min-width: 1025px) {
     .card {
-        width: 18vw; 
+        width: 18vw;
         height: 220px;
+        max-width: 20vw; 
     }
 }
